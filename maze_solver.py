@@ -23,7 +23,7 @@ def a_star(maze, start, end):
 
     while not open_set.empty():
         _, current = open_set.get()
-        steps.append(current)  # Store current step for animation
+        steps.append(current)  
         if current == end:
             path = []
             while current in came_from:
@@ -50,7 +50,7 @@ def create_maze_image(maze, steps=None, path=None):
     plt.figure(figsize=(6, 6))
     plt.imshow(maze_array, cmap='gray')
 
-    # Mark the start and end
+    
     plt.text(0, 0, 'S', color='green', ha='center', va='center', fontsize=12, fontweight='bold')
     plt.text(len(maze[0])-1, len(maze)-1, 'E', color='red', ha='center', va='center', fontsize=12, fontweight='bold')
 
@@ -72,7 +72,7 @@ def create_maze_image(maze, steps=None, path=None):
 
     plt.show()
 
-    # Save the image
+    
     plt.savefig('maze.png')
     plt.close()
 
