@@ -8,7 +8,7 @@ def load_image(path):
     image = Image.open(path)
     return image
 
-# Define the maze
+
 maze = [
     [0, 1, 0, 0, 0, 0, 0, 0],
     [0, 1, 0, 1, 1, 1, 1, 0],
@@ -27,7 +27,7 @@ if st.button("Solve"):
     st.write("Solving the maze...")
     path, steps = maze_solver.solve_maze(maze)
     
-    # Create a placeholder for the image
+   
     image_placeholder = st.empty()
 
     for i in range(len(steps)):
